@@ -164,10 +164,13 @@ img
 	font-family display-font
 	// height 200px
 	font-weight 300
-	margin-top 3em
+	padding-top 1.5em
+	padding-bottom 1.5em
 	position relative 
-	box-shadow shadow-1
 	opacity .5
+	img 
+		box-shadow shadow-1
+
 	._animation
 		display none
 	&.-selected
@@ -181,7 +184,7 @@ img
 	._title
 		text-align center
 		width 100%
-		top .5em
+		top 2em
 		position absolute
 		div
 			border-radius 100px
