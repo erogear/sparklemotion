@@ -1,0 +1,20 @@
+---
+layout: "default"
+---
+
+patterns = ["Rising Phoenix", "Shooting Stars", "Firey Flames", "Sparkle Motion", "Hammerzeit", "Timezword", "Blinkenlights", "Waveform"]
+
+.topbar.glowtext
+	i.icon-chevron-left.pull-left
+	._title.text-center.center
+		|DANCE FRENZY
+	i.icon-reorder.pull-right
+
+.patterns.glowtext
+	each pattern in patterns
+		.pattern
+			img._animation(src="/images/animated.gif")
+			img._still(src="/images/demopattern.gif")
+			._title 
+				div #{pattern}
+

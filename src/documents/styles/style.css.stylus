@@ -1,0 +1,195 @@
+@import "objectgrid"
+
+brand = #72FFAC
+darkgray = #321F2D
+accent = #64DEFF
+offwhite = #F8F8F8
+
+shadow-1 = 0px 2px 2px 1px rgba(black, .5)
+shadow-2 = 0px 1px 2px 1px rgba(black, .5)
+
+
+serif-font = "Merriweather", serif 
+sans-font = "Open Sans", sans-serif
+display-font = "Yanone Kaffeesatz", sans-serif
+
+//RESET
+*
+	box-sizing: border-box
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, outsput, ruby, section, summary, time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	display: block
+
+//PAGE
+body
+	font-family sans-font
+	text-rendering: optimizeLegibility
+	font-size: 18px
+	word-spacing: .15em
+	line-height: 1.5
+	color: offblack
+	&:before
+		content ''
+		z-index -1
+		top 0
+		bottom 0
+		left 0
+		right 0
+		position fixed
+		background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMklEQVQYV2NkIBIwEqmOgWyF9VAbGtFtQjeRaIVgg/7//y/JyMj4HNlUst2IMxCobyIAze0GCxR1BSQAAAAASUVORK5CYII="), darkgray
+		// background blue
+
+
+p, pre
+	margin-bottom .75em
+
+ol, ul
+	margin-left: 1em
+
+li 
+	margin-bottom: 0.5em
+	margin-top: 0.5em
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+strong
+	font-weight: 700
+
+hr
+	margin gutter 0
+	height: 1px
+	border: none
+	background: lightgray
+
+h1, h2, h3, h4, h5, h6
+	font-family sans-font
+	font-style italic
+	line-height .9em
+	margin-top .5em
+	margin-bottom: .5em
+
+h1
+	font-size: 3em
+
+h2
+	font-size: 2em
+
+h3
+	font-size: 1.5em
+
+h4
+	font-size: 1.25em
+
+h5, h6
+	font-size: 1em
+
+a
+	color: brand
+	text-decoration: none 
+	cursor pointer
+	&:visited
+		color: darken(brand, 30%)
+		text-decoration: none 
+	&:hover, &:active
+		color: darken(brand, 30%)
+		text-decoration underline 
+
+
+a.no-link-style
+	color inherit !important
+	text-decoration inherit !important
+
+
+img
+	width: 100%
+	display block
+
+.pull-right
+	float right
+
+.pull-left
+	float left
+
+.text-center
+	text-align center
+
+.text-left
+	text-align left
+
+.text-right
+	text-align right
+
+.glowtext
+	text-shadow 0px 0px 5px accent
+	color brand
+	
+
+.topbar
+	top 0
+	left 0
+	position fixed
+	z-index 2
+	width 100%
+	background darkgray
+	border-bottom 1px solid black
+	box-shadow shadow-2
+	i 
+		font-size 1.5em
+		margin .5em
+	._title
+		font-family display-font
+		font-weight 300
+		position absolute
+		clear none
+		font-size 2em
+		width 100%
+		text-align center
+		line-height 1
+		top .4rem
+		left 0
+
+// .patterns
+
+.pattern
+	font-family display-font
+	// height 200px
+	font-weight 300
+	margin-top 3em
+	position relative 
+	box-shadow shadow-1
+	opacity .5
+	._animation
+		display none
+	&.-selected
+		opacity 1
+		._animation
+			display block
+		._still
+			display none
+	&:first-child
+		margin-top 0
+	._title
+		text-align center
+		width 100%
+		top .5em
+		position absolute
+		div
+			border-radius 100px
+			padding .2em .5em
+			line-height .9
+			display inline-block
+			background rgba(darkgray, .8)
+			font-size 1.5em
+			line-height 1.5
+
+
