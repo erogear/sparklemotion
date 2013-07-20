@@ -1,8 +1,8 @@
 ---
 layout: "default"
 ---
+patterns = [{name: "Bokeh Sunrise", slug: "bokeh_sunrise", animate: false}, {name: "Fertility", slug: "fertility", animate: false}, {name: "Freedom", slug: "freedom", animate: false}, {name: "Hammerzeit", slug: "hammerzeit", animate: false}, {name: "Marching Waves", slug: "marching_waves", animate: false}, {name: "Orbital Station", slug: "orbital_station", animate: false}, {name: "Place Reversal", slug:"place_reversal", animate: false}, {name: "Pulsar", slug: "pulsar", animate: true}, {name:"Simple Path", slug: "simple_path", animate: false}]
 
-patterns = ["Rising Phoenix", "Shooting Stars", "Firey Flames", "Sparkle Motion", "Hammerzeit", "Timezword", "Blinkenlights", "Waveform"]
 
 .topbar.glowtext
 	i.icon-chevron-left.pull-left
@@ -13,8 +13,11 @@ patterns = ["Rising Phoenix", "Shooting Stars", "Firey Flames", "Sparkle Motion"
 .patterns.glowtext
 	each pattern in patterns
 		.pattern
-			img._animation(src="/images/animated.gif")
-			img._still(src="/images/demopattern.gif")
+			if (pattern.animate)
+				img._animation(src="images/#{pattern.slug}.gif")
+			else 
+				img._animation(src="images/#{pattern.slug}_still.gif")
+			img._still(src="images/#{pattern.slug}_still.gif")
 			._title 
-				div #{pattern}
+				div #{pattern.name}
 
